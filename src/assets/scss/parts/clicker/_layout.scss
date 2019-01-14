@@ -1,0 +1,132 @@
+$clicker-color-accent-1 : $color-accent-3;
+$clicker-color-accent-2 : #987F54;
+$clicker-color-accent-3 : #C09F68;
+
+.clicker {
+    max-width: 71rem;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+
+    background: $clicker-color-accent-1;
+
+    &-tagline {
+        padding: 2rem;
+
+        background: $clicker-color-accent-2;
+
+        font-family: $font-family-content;
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.4rem;
+        
+        @extend %uppercase;
+    }
+
+    &-content {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    &-value {
+        display: inline-block;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+
+        @media screen and (min-width: $mediumBreakpoint) {
+            margin-bottom: 9rem;
+        }
+
+        font-family: $font-family-content;
+        font-size: 1.4rem;
+        text-align: center;
+        color: #ffffff;
+
+        @extend %uppercase;
+
+        span {
+            opacity: 0.5;
+        }
+    }
+}
+
+
+.clicker {
+    &-package {
+        font-family: $font-family-title;
+        text-align: center;
+        color: #ffffff;
+        padding: 1rem 0;
+
+        &--large {
+            font-size: 3.1rem;
+            text-transform: uppercase;
+            margin-top: 5rem;
+        }
+        &--small {
+            font-size: 2.5rem;
+            font-style: italic;
+            margin-bottom: 5rem;
+        }
+        &-logo {
+            max-width: 25rem;
+            width: 100%;
+            margin: 0 auto 8rem;
+        }
+    }
+}
+
+
+
+.clicker {
+    &-list {
+        padding: 2rem 0 1.5rem 0;
+        position: relative;
+
+        font-family: $font-family-title;
+        font-size: 1.8rem;
+        color: #ffffff;
+        text-align: center;
+        
+        background: $clicker-color-accent-3;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            display: block;
+            content: '';
+            width: 5rem;
+            height: 2rem;
+
+            background: url('../img/deviders/devider-3.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &-item {
+        position: relative;
+        padding: 2.5rem 0;
+
+        text-transform: uppercase;
+
+        &:not(:first-child)::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            content: '';
+            width: 12rem;
+            height: 1rem;
+
+            background: url('../img/deviders/devider-1.svg') no-repeat;
+        }
+    }
+}

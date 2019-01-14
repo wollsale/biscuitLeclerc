@@ -18,7 +18,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "html-loader",
-          options: { minimize: true }
+          options: { minimize: false }
         }
       },
       /* SCSS */

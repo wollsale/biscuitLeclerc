@@ -1,0 +1,16 @@
+.background {
+    &--red {
+        background: $color-accent-1;
+    }
+    &--dual {
+        background-image:
+            linear-gradient(
+                to bottom, 
+                $color-accent-1 30%,
+                $color-accent-1 30%,
+                #fff 30%,
+                #fff 85%,
+                #fff 85%
+            );
+    }
+}

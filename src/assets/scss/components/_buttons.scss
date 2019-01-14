@@ -1,0 +1,23 @@
+.btn {
+    max-width: 40rem;
+    width: calc(100% - 2rem);
+    height: 5rem;
+    display: block;
+    
+    text-align: center;
+    font-family: $font-family-content;
+    text-decoration: none;
+    line-height: 5rem;
+
+    border-radius: .3rem;
+
+    &-primary {
+        background: $color-accent-1;
+        color: #ffffff;
+    }
+    &-secondary {
+        border: 1px solid $color-accent-1;
+        background: #ffffff;
+        color: $color-accent-1;
+    }
+}

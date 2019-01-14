@@ -1,0 +1,44 @@
+.loader {
+    &-wrapper {
+        height: 100vh;
+        display: flex;
+        pointer-events: none;
+
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+
+        background: $color-accent-1 url('./../img/header/hero.jpg');
+        background-size: contain;
+
+        transform: translateY(0rem) scaleY(1);
+        transform-origin: top;
+        
+        animation: loader-off .6s linear forwards 2s;
+    }
+
+    &-logo-wrapper {
+        margin: auto;
+        overflow: hidden;
+    }
+
+    &-logo {
+        width: 13rem;
+        transform: translateY(10rem);
+
+        animation: loader-in .8s cubic-bezier(0.77, 0, 0.175, 1) forwards .5s, loader-out .8s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.8s;
+    }
+}
+
+@keyframes loader-in {
+    from { transform: translateY(10rem); }
+    to { transform: translateY(0rem); }
+}
+@keyframes loader-out {
+    from { transform: translateY(0rem); }
+    to { transform: translateY(-10rem); }
+}
+@keyframes loader-off {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

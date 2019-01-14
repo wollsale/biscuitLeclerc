@@ -1,0 +1,97 @@
+/* header */
+
+.header {
+    position: relative;
+    height: 100%;
+    height: calc(100vh - 20rem);
+    padding: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    
+    background: $color-accent-1 url('../img/header/hero-mobile.jpg') no-repeat;
+    background-size: cover;
+    
+    @media screen and (min-width: $mediumBreakpoint) {
+        background: $color-accent-1 url('../img/header/hero.jpg') no-repeat;
+        background-size: cover;
+      }
+
+    &::after {
+      display: block;
+      content: '';
+      
+      height: 10rem;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(175, 15, 19, 0) 0%, #AF0F13 100%);
+      
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-title {
+        max-width: 55rem;
+        width: 100%;
+        
+        margin: auto;
+
+        img { width: 100%; }
+    }
+}
+
+
+/* Topbar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        max-width: 6rem;
+        img { width: 100%; }
+    }
+}
+
+
+/* Hamburger */
+
+.hamburger {
+  width: 30px; height: 2px;
+  background: #fff;
+  transition: all .2s ease-out;
+  
+  &__wrapper {
+    cursor: pointer; 
+
+    width: 30px; height: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.hamburger__wrapper {
+  &:hover {
+    .hamburger {
+      &--top, &--bottom {
+        width: 31px; 
+        height: 3px;
+		    transition: all .2s ease-out;
+      }
+      &--top {
+        transform: rotate(-45deg);
+	    	transform-origin: top right;
+      }
+      &--middle {
+        opacity: 0;
+      }
+      &--bottom {
+        transform: rotate(45deg);
+        transform-origin: bottom right;
+      }
+    }
+  }
+}

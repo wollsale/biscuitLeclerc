@@ -1,0 +1,9 @@
+.action {
+    .btn {
+        margin: 3rem auto 1rem;
+
+        @media screen and (min-width: $mediumBreakpoint) {
+            margin: 7.5rem auto;
+        }
+    }
+}

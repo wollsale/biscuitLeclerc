@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+// Base
+@import './base/colors',
+        './base/type';
+
+// Helpers
+@import './helpers/hidden',
+        './helpers/type',
+        './helpers/background',
+        './helpers/breakpoints';
+
+// Parts
+@import './parts/header/layout',
+        './parts/clicker/layout',
+        './parts/rules/layout',
+        './parts/action/layout',
+        './parts/loader/layout';
+
+// Components
+@import './components/buttons';
+
+main {
+    // transform: translateY(-20rem);
+    position: relative;
+    // top: -20rem;
+}
